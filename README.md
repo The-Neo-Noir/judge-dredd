@@ -67,6 +67,8 @@ java -cp /usr/local/java-libs/*:. com.curiousnerds.judge.Work
 
 
 MYSQL experiment notes; 
+> Before you should execute the mysql ./run --language mysql , you must insert data; by using
+> `mysql -u dinda -pdinda dinda < mysql/mysqlsampledatabase.sql`
 
 > Set up docker instance with a mysql server running. 
 > the docker instance could be shared with other instances, make the mysql server running in background. 
@@ -78,6 +80,8 @@ MYSQL experiment notes;
 
  mysql -u dinda -p dinda -e select * from employee;  > sometext.txt
 mysql -u dinda -pdinda dinda -s -e "select * from employe;" >> out.txt  2>err.txt ; // with out.txt and err.txt; // added -s to remove the header  // -t to show in table format 
+
+
 
 export MYSQL_PWD=dinda ;mysql -u dinda  dinda -s -e "select * from employe;" >> out.txt  2>err.txt ; // solves the mysql warning on the err file , about the password being passed from comand line 
 
